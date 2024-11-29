@@ -1,0 +1,67 @@
+Lab 03
+
+Run git clone
+
+cd cabernfiberendrepo
+
+E:\new\hello\cabernfiberendrepo>git add index.html
+
+E:\new\hello\cabernfiberendrepo>git commit -a -m "create index html"
+
+git push
+
+Manually import a repo
+
+git clone --bare https://github.com/Azure-Samples/laravel-tasks.git
+
+git push --mirror 
+
+lab 05
+
+
+create folder mkdir dilshantest
+
+Step 3: Create a web app
+
+cd html-docs-hello-world
+
+az webapp up --location westeurope --name dilshantesthtml --html
+
+dynamic page
+
+1. Configure a deployment user
+
+az webapp deployment user set --user-name dilshan2000 --password dilshan123@
+
+2. Create Resource group
+
+az group create --name myResourceGrouptoday --location "West Europe"
+az appservice list-locations --sku FREE
+
+3.Create an Azure App Service plan
+
+az appservice plan create --name myResourceGrouptodayplan2 --resource-group myResourceGrouptoday --sku FREE --is-linux
+
+4. Create a web app
+
+
+az webapp create --resource-group myResourceGrouptoday --plan myResourceGrouptodayplan2 --name dynamicexample --runtime "PHP|8.3" --deployment-local-git
+
+git remote add azure https://dilshan2000@dynamicexample.scm.azurewebsites.net/dynamicexample.git
+
+git push azure master
+
+5. update
+
+git commit -am "updated output"
+git push azure master
+
+
+server bane :mydemoserver2
+
+1. Go to Connection security
+2. Select Add current client IP address , and then select Save
+
+mysql -h dilshan12.mysql.database.azure.com -P 3306 -u danidu -p --ssl
+
+dilshan123@
